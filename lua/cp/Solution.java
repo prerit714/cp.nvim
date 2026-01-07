@@ -6,6 +6,20 @@
 import java.io.*;
 import java.util.*;
 
+class CP {
+  public static long binPow(long a, long b) {
+    long res = 1;
+    while (b > 0) {
+      if ((b & 1) == 1) {
+        res = res * a;
+      }
+      a = a * a;
+      b >>= 1;
+    }
+    return res;
+  }
+}
+
 class FastIO {
   private final BufferedReader br;
   private StringTokenizer st;
@@ -118,9 +132,9 @@ class FastIO {
 }
 
 class Solution {
-  public static void main(String[] args) {
-    FastIO io = new FastIO();
-    int t = io.nextInt();
+  public static void main(String... args) {
+    var io = new FastIO();
+    var t = io.nextInt();
     while (t-- > 0) {
       ;
     }
