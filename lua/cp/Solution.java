@@ -120,7 +120,7 @@ class FastIO {
 class Solution {
   public static void main(String[] args) {
     FastIO io = new FastIO();
-    int t = nextInt();
+    int t = io.nextInt();
     while (t-- > 0) {
       ;
     }
