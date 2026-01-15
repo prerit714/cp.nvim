@@ -44,6 +44,10 @@ using u64 = uint64_t;
 
 #define REPR(i, x, y) for (int i = (x); i >= (y); --i)
 
+#define NL '\n'
+
+#define SP ' '
+
 struct Timer {
   chrono::high_resolution_clock::time_point start{};
   Timer() { start = chrono::high_resolution_clock::now(); }
