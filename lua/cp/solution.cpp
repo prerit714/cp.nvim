@@ -45,7 +45,7 @@ using u64 = uint64_t;
 #define REPR(i, x, y) for (int i = (x); i >= (y); --i)
 
 struct Timer {
-  chrono::high_resolution_clock::time_point start;
+  chrono::high_resolution_clock::time_point start{};
   Timer() { start = chrono::high_resolution_clock::now(); }
   ~Timer() {
     auto end = chrono::high_resolution_clock::now();
@@ -57,7 +57,7 @@ struct Timer {
 
 #define timed(x)                                                               \
   {                                                                            \
-    Timer __t;                                                                 \
+    Timer __t{};                                                               \
     x;                                                                         \
   }
 
@@ -67,6 +67,6 @@ void solve() {
 
 int main() {
   FASTIO;
-  timed({ solve(); });
+  solve();
   return EXIT_SUCCESS;
 }
