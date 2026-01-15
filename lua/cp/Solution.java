@@ -132,8 +132,9 @@ class FastIO {
 }
 
 class Solution {
+  static final FastIO io = new FastIO();
+
   public static void main(String... args) {
-    var io = new FastIO();
     var t = io.nextInt();
     while (t-- > 0) {
       ;
