@@ -36,9 +36,9 @@ using u64 = uint64_t;
   cout << endl
 
 #define FASTIO                                                                 \
-  ios::sync_with_stdio(0);                                                     \
-  cin.tie(0);                                                                  \
-  cout.tie(0);
+  ios::sync_with_stdio(false);                                                 \
+  cin.tie(nullptr);                                                            \
+  cout.tie(nullptr);
 
 #define REP(i, x, y) for (int i = (x); i <= (y); ++i)
 
