@@ -10,7 +10,7 @@ using vi32 = vector<i32>;
 using vi64 = vector<i64>;
 using vui32 = vector<u32>;
 
-#define SEED_TIME srand(time(nullptr));
+#define SEED_TIME srand(static_cast<u32>(time(nullptr)));
 
 #define F first
 #define S second

@@ -12,7 +12,7 @@ M.__handle_cpp = function()
   vim.api.nvim_buf_set_lines(0, 0, -1, false, template_lines)
 
   -- Move cursor to specific position
-  vim.api.nvim_win_set_cursor(0, { 64, 0 })
+  vim.api.nvim_win_set_cursor(0, { 74, 1 })
 end
 
 --- Handle java template injection
