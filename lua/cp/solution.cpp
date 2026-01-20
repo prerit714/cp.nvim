@@ -10,6 +10,8 @@ using vi32 = vector<i32>;
 using vi64 = vector<i64>;
 using vui32 = vector<u32>;
 
+#define SEED_TIME srand(time(nullptr));
+
 #define F first
 #define S second
 #define PB push_back
@@ -22,17 +24,19 @@ using vui32 = vector<u32>;
 #define DEB(x) cout << #x << " = " << x << endl
 #define DEB2(x, y) cout << #x << " = " << x << ", " << #y << " = " << y << endl
 
-#define DEBARR(arr, n)                                                         \
-  cout << #arr << " : ";                                                       \
-  for (int i = 0; i < n; i++)                                                  \
-    cout << arr[i] << " ";                                                     \
-  cout << endl
-
 #define DEBVEC(v)                                                              \
   cout << #v << " : ";                                                         \
   for (auto x : v)                                                             \
     cout << x << " ";                                                          \
   cout << endl
+
+#define DEBVEC2D(v)                                                            \
+  cout << #v << " :\n";                                                        \
+  for (auto &row : v) {                                                        \
+    for (auto x : row)                                                         \
+      cout << x << "\t";                                                       \
+    cout << "\n";                                                              \
+  }
 
 #define DEBMAP(m)                                                              \
   cout << #m << " : ";                                                         \
@@ -53,12 +57,20 @@ using vui32 = vector<u32>;
 
 #define SP ' '
 
-void solve() {
-  // Author: https://prerit714.cloud
-}
+i32 _rand(i32, i32);
+void solve();
 
 int main() {
+  SEED_TIME;
   FASTIO;
   solve();
   return EXIT_SUCCESS;
+}
+
+i32 _rand(i32 lo = INT_MIN, i32 hi = INT_MAX) {
+  return lo + rand() % (hi - lo + 1);
+}
+
+void solve() {
+  // Author: https://prerit714.cloud
 }
