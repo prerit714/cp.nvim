@@ -2,8 +2,13 @@
 using namespace std;
 
 using i32 = int32_t;
+using u32 = uint32_t;
 using i64 = int64_t;
 using u64 = uint64_t;
+
+using vi32 = vector<i32>;
+using vi64 = vector<i64>;
+using vui32 = vector<u32>;
 
 #define F first
 #define S second
@@ -47,23 +52,6 @@ using u64 = uint64_t;
 #define NL '\n'
 
 #define SP ' '
-
-struct Timer {
-  chrono::high_resolution_clock::time_point start{};
-  Timer() { start = chrono::high_resolution_clock::now(); }
-  ~Timer() {
-    auto end = chrono::high_resolution_clock::now();
-    cerr << "[TIME]: "
-         << chrono::duration_cast<chrono::milliseconds>(end - start).count()
-         << " ms\n";
-  }
-};
-
-#define timed(x)                                                               \
-  {                                                                            \
-    Timer __t{};                                                               \
-    x;                                                                         \
-  }
 
 void solve() {
   // Author: https://prerit714.cloud
